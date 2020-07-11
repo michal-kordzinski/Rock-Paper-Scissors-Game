@@ -1,2 +1,2 @@
-# gra-papier-kamien-nozyczki
-Gra papier-kamień-nożyczki
+# Rock-Paper-Scissors Game
+
