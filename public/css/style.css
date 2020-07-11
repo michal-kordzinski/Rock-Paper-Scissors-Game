@@ -1,0 +1,14 @@
+.jumbotron {
+    background-color: transparent;
+    text-align: center;
+    padding: 20px 0px 0px 0px;
+}
+#game {
+    display: flex;
+    justify-content: space-around;
+    padding-top: 10px;
+}
+.header {
+    text-align: center;
+    padding: 30px;
+}
