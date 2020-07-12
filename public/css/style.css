@@ -3,7 +3,7 @@
     text-align: center;
     padding: 20px 0px 0px 0px;
 }
-#game {
+.game {
     display: flex;
     justify-content: space-around;
     padding-top: 10px;

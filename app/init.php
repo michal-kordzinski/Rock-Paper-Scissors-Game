@@ -20,9 +20,9 @@ define('DB_CHARSET', 'utf8');
 session_start();
 
 /**
- * classes autoloader
- * TODO rebulid to OOP
- */
+* classes autoloader
+* TODO rebulid to OOP
+*/
 spl_autoload_register(function($class){
     require_once('core/' . $class . '.php');
 });

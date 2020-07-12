@@ -31,10 +31,19 @@
     <section>
         <div class="container">
             <h2 class="header">Pick your play</h2>
-            <div id="game">
+            <div class="game">
                 <img src="../public/img/rock.png" alt="rock">
                 <img src="../public/img/paper.png" alt="paper">
                 <img src="../public/img/scissors.png" alt="scissors">
+            </div>
+            <div>
+                <form action="<?=URL?>/game/play" method="POST">
+                    <div class="game">
+                        <button type="submit" class="btn btn-primary" name="submit" value="Rock">Rock</button>
+                        <button type="submit" class="btn btn-primary" name="submit" value="Paper">Paper</button>
+                        <button type="submit" class="btn btn-primary" name="submit" value="Scissors">Scissors</button>
+                    </div>
+                </form>
             </div>
             <div class="header">
                 <h5>Computer plays:</h5>

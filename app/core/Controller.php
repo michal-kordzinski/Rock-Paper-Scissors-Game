@@ -5,6 +5,7 @@
  */
 abstract class Controller
 {
+    protected $model;
     /**
      * return a model
      *
@@ -15,7 +16,7 @@ abstract class Controller
     protected function getModel($model)
     {
         require_once('../app/models/' . $model . '.php');
-        return new $model();
+        return new $model;
     }
 
     /**
