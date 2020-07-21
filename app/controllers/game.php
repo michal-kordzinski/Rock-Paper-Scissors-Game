@@ -6,18 +6,25 @@
 class Game extends Controller
 {
     /**
-     * @var
+     * @var array
      */
     private $game_result;
 
     /**
+     * @param $number_of_game array number of game
+     * @param $key_of_value array deliver one of the keys:
+     *                            "Compuer play" - return string
+     *                            "User play" - return string
+     *                            "Who wins" - return string
+     *                            "Date"- return date
+     *
      * @return mixed
      * TODO zdebbugowanie zasięgu funckji - wychodzi poza zakres; implementacja
      *              nowej metody zwracania poszczególnych elementów z tablicy
      */
-    public function getGameResult($index)
+    public function getGameResult($number_of_game, $key_of_value)
     {
-        return $this->game_result[$index];
+        return $this->game_result[$number_of_game][$key_of_value];
     }
 
     /**
@@ -54,7 +61,13 @@ class Game extends Controller
         $this->model->saveResults($computer_play, $user_play, GameResults::whoWin($computer_play, $user_play));
         $this->setGameResult($this->model->getResults()); //array
         // TODO zdebbugowanie poniższej funckji
-        $this->getView('game', [$this->getGameResult(0),$this->getGameResult(2) ]);
+        //print_r($this->game_result[array_key_last($this->game_result)]);
+        $this->getView('game', [
+            $this->getGameResult(
+                array_key_last($this->game_result), "Computer play"),
+            $this->getGameResult(
+                array_key_last($this->game_result), "Who wins")
+        ]);
         /**
          * TODO zwrócenie widoku game wraz z parametrami (wynikami gry)
          * TODO dowiedzenie się, z jakich przyczyn zwracany widok nie zawiera

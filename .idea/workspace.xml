@@ -2,17 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4a3ced28-0ecd-42a0-b57f-b7f787ab1578" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/core/GameResults.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/core/RandomizeNumber.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/controllers/game.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/game.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/core/Controller.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/core/Controller.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/init.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/init.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/GameModel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/GameModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/GameModel.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/game.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/game.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/results.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/results.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,7 +79,8 @@
       <updated>1594473936487</updated>
       <workItem from="1594473944233" duration="2938000" />
       <workItem from="1594497421359" duration="2707000" />
-      <workItem from="1594516572321" duration="17915000" />
+      <workItem from="1594516572321" duration="19317000" />
+      <workItem from="1595328463682" duration="3374000" />
     </task>
     <servers />
   </component>
@@ -113,13 +108,14 @@
       <screen x="0" y="0" width="1739" height="939" />
     </state>
     <state x="706" y="393" key="NewPhpFileDialog/0.0.1739.939/1920.0.1522.912@0.0.1739.939" timestamp="1594500851572" />
-    <state x="566" y="293" key="com.intellij.ide.util.TipDialog" timestamp="1594516654058">
-      <screen x="0" y="0" width="1739" height="939" />
+    <state x="2415" y="285" key="com.intellij.ide.util.TipDialog" timestamp="1595328473384">
+      <screen x="1920" y="0" width="1522" height="912" />
     </state>
     <state x="566" y="293" key="com.intellij.ide.util.TipDialog/0.0.1739.939/1920.0.1522.912@0.0.1739.939" timestamp="1594516654058" />
-    <state x="532" y="200" width="672" height="678" key="search.everywhere.popup" timestamp="1594473974420">
+    <state x="2415" y="285" key="com.intellij.ide.util.TipDialog/0.0.1739.939/1920.0.1522.912@1920.0.1522.912" timestamp="1595328473384" />
+    <state x="532" y="200" width="672" height="678" key="search.everywhere.popup" timestamp="1595330447243">
       <screen x="0" y="0" width="1739" height="939" />
     </state>
-    <state x="532" y="200" width="672" height="678" key="search.everywhere.popup/0.0.1739.939/1920.0.1522.912@0.0.1739.939" timestamp="1594473974420" />
+    <state x="532" y="200" width="672" height="678" key="search.everywhere.popup/0.0.1739.939/1920.0.1522.912@0.0.1739.939" timestamp="1595330447243" />
   </component>
 </project>

@@ -36,7 +36,8 @@ class GameModel
 
 
     /**
-     * Saving in $_SESSION['game_number'] game number. Ancillary function of saveResults function
+     * Saving in $_SESSION['game_number'] game number.
+     * Ancillary function of saveResults function
      */
     private function saveGameNumber()
     {

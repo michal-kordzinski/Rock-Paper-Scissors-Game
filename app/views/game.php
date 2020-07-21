@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-    <link rel="stylesheet" href="../public/css/style.css">
+    <link rel="stylesheet" href="<?=URL?>/css/style.css">
     <title>Rock-Paper-Scissors Game</title>
 </head>
 <body>
@@ -32,9 +32,9 @@
         <div class="container">
             <h2 class="header">Pick your play</h2>
             <div class="game">
-                <img src="../public/img/rock.png" alt="rock">
-                <img src="../public/img/paper.png" alt="paper">
-                <img src="../public/img/scissors.png" alt="scissors">
+                <img src="<?=URL?>/img/rock.png" alt="rock">
+                <img src="<?=URL?>/img/paper.png" alt="paper">
+                <img src="<?=URL?>/img/scissors.png" alt="scissors">
             </div>
             <div>
                 <form action="<?=URL?>/game/play" method="POST">
@@ -46,8 +46,8 @@
                 </form>
             </div>
             <div class="header">
-                <h5>Computer plays:</h5>
-                <h3>Result:</h3>
+                <h5>Computer plays: <?php if (isset($data[0])) echo $data[0] ?></h5>
+                <h3>Result: <?php if (isset($data[0])) echo $data[1] ?></h3>
             </div>
         </div>
     </section>
