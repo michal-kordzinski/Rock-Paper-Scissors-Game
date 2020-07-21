@@ -7,6 +7,7 @@ class GameResults
     public static function whoWin($computer_play, $user_play)
     {
         if (self::isComputerWin($computer_play, $user_play)) return "Computer wins!";
+        else if (self::isTie($computer_play, $user_play)) return "Tie!";
         else return "You win!";
     }
     /**
@@ -15,8 +16,9 @@ class GameResults
      * Function compares results of game. It takes two params: int or string and
      * return true if computer wins and false if not
      * @return bool
+     * TODO to fix a game logic - a draw could be xD!
      */
-    private static function isComputerWin($computer_play, $user_play)
+    private function isComputerWin($computer_play, $user_play)
     {
         if (is_string($computer_play)){
             $computer_play = self::ResultConversion($computer_play);
@@ -31,6 +33,17 @@ class GameResults
         } else {
             return false;
         }
+    }
+    private function isTie($computer_play, $user_play)
+    {
+        if (is_string($computer_play)){
+            $computer_play = self::ResultConversion($computer_play);
+        }
+        if (is_string($user_play)){
+            $user_play = self::ResultConversion($user_play);
+        }
+        if ($computer_play == $user_play) return true;
+        else return false;
     }
 
     /**

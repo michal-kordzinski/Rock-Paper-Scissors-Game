@@ -4,9 +4,8 @@
     <list default="true" id="4a3ced28-0ecd-42a0-b57f-b7f787ab1578" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/controllers/game.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/game.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/GameModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/GameModel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/game.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/game.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/results.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/results.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/results.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/results.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/core/GameResults.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/core/GameResults.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,7 +79,7 @@
       <workItem from="1594473944233" duration="2938000" />
       <workItem from="1594497421359" duration="2707000" />
       <workItem from="1594516572321" duration="19317000" />
-      <workItem from="1595328463682" duration="3374000" />
+      <workItem from="1595328463682" duration="5550000" />
     </task>
     <servers />
   </component>

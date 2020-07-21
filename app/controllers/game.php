@@ -19,8 +19,6 @@ class Game extends Controller
      *                            "Date"- return date
      *
      * @return mixed
-     * TODO zdebbugowanie zasięgu funckji - wychodzi poza zakres; implementacja
-     *              nowej metody zwracania poszczególnych elementów z tablicy
      */
     public function getGameResult($number_of_game, $key_of_value)
     {
@@ -69,9 +67,6 @@ class Game extends Controller
                 array_key_last($this->game_result), "Who wins")
         ]);
         /**
-         * TODO zwrócenie widoku game wraz z parametrami (wynikami gry)
-         * TODO dowiedzenie się, z jakich przyczyn zwracany widok nie zawiera
-         *      styli oraz obrazków
          * TODO stworzenie interfejsu przekierowującego
          * TODO przebudowa obiektów zgodnie z solid 5 - metody tego
          *      wymagające przenieść do interfejsów

@@ -9,4 +9,8 @@ class Results extends Controller
     {
         $this->getView('results');
     }
+    public function __construct()
+    {
+
+    }
 }
