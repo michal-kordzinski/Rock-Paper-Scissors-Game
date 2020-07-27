@@ -23,3 +23,12 @@
 .game_button:hover {
     transform: scale(1.2);
 }
+@media only screen and (max-width: 900px) {
+    .game {
+        justify-content: center;
+    }
+    .game_img {
+        width: 100%;
+        height: 100%;
+    }
+}

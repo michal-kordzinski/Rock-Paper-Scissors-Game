@@ -43,6 +43,10 @@ class Game extends Controller
      */
     public function play()
     {
+        if (!isset($_POST['safety_button'])){
+            header('HTTP/1.0 403 Forbidden', TRUE, 403);
+            die(header('Location: ' . URL/game));
+        }
         $this->model = $this->getModel('GameModel');
         //$computer_play = GameResults::ResultConversion(RandomizeNumber::randomize()); //string
         $this->model->setComputerPlay(GameResults::ResultConversion(RandomizeNumber::randomize()));

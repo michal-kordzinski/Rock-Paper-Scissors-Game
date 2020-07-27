@@ -34,10 +34,12 @@
             <div>
                 <form action="<?=URL?>/game/play" method="POST">
                     <div class="game">
-                        <button type="submit" name="submit" value="Rock" class="game_button"><img src="<?=URL?>/img/rock.png" alt="Rock"></button>
-                        <button type="submit" name="submit" value="Paper" class="game_button"><img src="<?=URL?>/img/paper.png" alt="Rock"></button>
-                        <button type="submit" name="submit" value="Rock" class="game_button"><img src="<?=URL?>/img/rock.png" alt="Rock"></button>
+
+                        <button type="submit" name="submit" value="Rock" class="game_button img-fluid"><img src="<?=URL?>/img/rock.png" alt="Rock" class="game_img"></button>
+                        <button type="submit" name="submit" value="Paper" class="game_button img-fluid"><img src="<?=URL?>/img/paper.png" alt="Rock" class="game_img"></button>
+                        <button type="submit" name="submit" value="Rock" class="game_button img-fluid"><img src="<?=URL?>/img/rock.png" alt="Rock" class="game_img"></button>
                     </div>
+                    <input name="safety_button" type="hidden" value="safety_button">
                 </form>
             </div>
             <div class="header">
