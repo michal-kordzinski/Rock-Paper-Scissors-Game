@@ -60,7 +60,7 @@ class GameModel
             "Computer play" =>$this->computer_play,
             "User play"     =>$this->user_play,
             "Who wins"      =>GameResults::whoWin($this->computer_play, $this->user_play),
-            "Date"          =>date('l jS \of F Y h:i:s A')
+            "Date"          =>date('D jS \of F G:i:s')
         );
         if (!isset($_SESSION['game_results'])) $_SESSION['game_results'] = [];
         array_push($_SESSION['game_results'] , $tab);

@@ -49,8 +49,8 @@
         </div>
     </section>
     <footer>
-        <div class="container header">
-            <p>Copyright ©2020 · Author: Michał Kordziński</p>
+        <div class="container header footer">
+            <p>Copyright ©2020 · Author: Michał Kordziński · GitHub: https://github.com/michal-kordzinski</p>
         </div>
     </footer>
 

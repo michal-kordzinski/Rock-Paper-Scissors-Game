@@ -29,6 +29,13 @@
     }
     .game_img {
         width: 100%;
-        height: 100%;
+        height: 130%;
+    }
+    .footer {
+        font-size: 80%;
+        padding-top: 0;
+    }
+    tr {
+        font-size: 70%;
     }
 }
