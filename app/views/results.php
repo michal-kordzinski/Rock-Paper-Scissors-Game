@@ -31,7 +31,44 @@
     <section>
         <div class="container">
             <h2 class="header">The results of your games</h2>
-            
+            <table class="table">
+            <thead>
+                <tr>
+                <th scope="col">Number of Game</th>
+                <th scope="col">Computer played</th>
+                <th scope="col">You played</th>
+                <th scope="col">Who wins</th>
+                </tr>
+            </thead>
+            <tbody>
+            <?php
+            // TODO Naprawienie błędu z NULLEM
+            if (isset($data[0])) {
+                $numer_of_game = 1;
+                foreach ($data[0] as $gra){
+                    echo '<tr>';
+                    echo "<th scope='row'>$numer_of_game</th>";
+
+                    foreach ($gra as $val) {
+                        if ($val == "Computer wins!"){
+                            echo "<td style='color: red'>$val</td>";
+                        }
+                        elseif ($val == "You win!"){
+                            echo "<td style='color: green'>$val</td>";
+                        }
+                        elseif ($val == "Tie!") {
+                            echo "<td style='color: saddlebrown'>$val</td>";
+                        }
+                        else echo "<td>$val</td>";
+                    }
+
+                    echo '</tr>';
+                    $numer_of_game += 1;
+                }
+            }
+            ?>
+            </tbody>
+            </table>
         </div>
     </section>
     <footer>

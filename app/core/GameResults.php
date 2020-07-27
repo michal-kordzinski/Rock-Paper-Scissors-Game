@@ -16,7 +16,6 @@ class GameResults
      * Function compares results of game. It takes two params: int or string and
      * return true if computer wins and false if not
      * @return bool
-     * TODO to fix a game logic - a draw could be xD!
      */
     private function isComputerWin($computer_play, $user_play)
     {
@@ -34,6 +33,13 @@ class GameResults
             return false;
         }
     }
+
+    /**
+     * @param $computer_play
+     * @param $user_play
+     *
+     * @return bool
+     */
     private function isTie($computer_play, $user_play)
     {
         if (is_string($computer_play)){

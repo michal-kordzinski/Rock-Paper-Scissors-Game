@@ -7,8 +7,19 @@
     display: flex;
     justify-content: space-around;
     padding-top: 10px;
+
 }
 .header {
     text-align: center;
     padding: 30px;
+}
+.game_button {
+    background-color: transparent;
+    border-width: 0;
+    transition: transform .2s;
+    padding: 2px 2px 2px 2px;
+    border-color: black;
+}
+.game_button:hover {
+    transform: scale(1.2);
 }

@@ -5,46 +5,95 @@
  */
 class GameModel
 {
-    /**
-     * Saving results of game as table into table
-     * $_SESSION['game_results'][$_SESSION['game_number']
-     *
-     * @param $computer_play
-     * @param $user_play
-     * @param $who_win
-     *
-     */
+    private $computer_play;
 
-    public function saveResults($computer_play, $user_play, $who_win)
+    private $user_play;
+
+    private $game_results;
+    /**
+     * @param mixed $computer_play
+     */
+    public function setComputerPlay($computer_play)
     {
-        $this->saveGameNumber();
+        $this->computer_play = $computer_play;
+    }
+
+
+    /**
+     * @return mixed
+     */
+    public function getUserPlay()
+    {
+        return $this->user_play;
+    }
+
+    /**
+     * @param mixed
+     *
+     * @return GameModel
+     */
+    public function setUserPlay()
+    {
+        $this->user_play = $_POST['submit'];
+        return $this;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getComputerPlay()
+    {
+        return $this->computer_play;
+    }
+
+
+    /**
+     * Method saving the results of the game in $_SESSION['game_results'] as arrays.
+     * Every array is one game. Index of array is a number of game.
+     *
+     * @return void
+     */
+    public function saveResults() :void
+    {
+
         $tab = array(
-            "Computer play" =>$computer_play,
-            "User play"     =>$user_play,
-            "Who wins"      =>$who_win,
+            "Computer play" =>$this->computer_play,
+            "User play"     =>$this->user_play,
+            "Who wins"      =>GameResults::whoWin($this->computer_play, $this->user_play),
             "Date"          =>date('l jS \of F Y h:i:s A')
         );
-        $_SESSION['game_results'][$_SESSION['game_number']] = [];
-        array_push($_SESSION['game_results'][$_SESSION['game_number']] , $tab);
-        //echo '<pre>' . print_r($_SESSION['game_results']) . '</pre>';
-        //echo '<pre>' . var_dump($_SESSION['game_number']) . '</pre>';
-    }
-    public function getResults() :array
-    {
-        return $_SESSION['game_results'][$_SESSION['game_number']];
+        if (!isset($_SESSION['game_results'])) $_SESSION['game_results'] = [];
+        array_push($_SESSION['game_results'] , $tab);
+
     }
 
 
     /**
-     * Saving in $_SESSION['game_number'] game number.
-     * Ancillary function of saveResults function
+     * Getter of game of result. Default returns array who contains arrays.
+     * Every array is one game. Index of an array is a number of game.
+     * Can be specified options of getters via params.
+     *
+     * @param bool $number_of_game Optional: Takes the number of game
+     *
+     * @param bool $key_of_element Optional: Takes the key of element
+     * @param bool $last_game Optional: Set true if u want get results of last game
+     *
+     * @return array|string
      */
-    private function saveGameNumber()
+    public function getGameResults($number_of_game = false, $key_of_element = false, $last_game = false)
     {
-        if (isset($_SESSION['game_number'])){
-            $_SESSION['game_number'] += 1;
-        } else {
-            $_SESSION['game_number'] = 0;
+        if ($key_of_element != false && $last_game = true) {
+            return $_SESSION['game_results'][array_key_last($_SESSION['game_results'])][$key_of_element];
+        }
+        elseif ($number_of_game != false && $key_of_element != false && $last_game == false){
+            return $_SESSION['game_results'][$number_of_game][$key_of_element];
+        }
+        elseif ($number_of_game != false && $key_of_element == false && $last_game == false){
+            return $_SESSION['game_results'][$number_of_game];
+        }
+        else {
+            if (isset($_SESSION['game_results'])) return $_SESSION['game_results'];
         }
     }
+
 }

@@ -2,10 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4a3ced28-0ecd-42a0-b57f-b7f787ab1578" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/controllers/game.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/game.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/controllers/results.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/results.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/core/Controller.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/core/Controller.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/core/GameResults.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/core/GameResults.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/GameModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/GameModel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/game.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/game.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/results.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/results.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/style.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,6 +54,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -79,7 +86,8 @@
       <workItem from="1594473944233" duration="2938000" />
       <workItem from="1594497421359" duration="2707000" />
       <workItem from="1594516572321" duration="19317000" />
-      <workItem from="1595328463682" duration="5550000" />
+      <workItem from="1595328463682" duration="12872000" />
+      <workItem from="1595614390954" duration="22487000" />
     </task>
     <servers />
   </component>
@@ -87,30 +95,34 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="664" y="185" key="#com.intellij.ide.util.MemberChooser" timestamp="1594577848716">
+    <state x="664" y="185" key="#com.intellij.ide.util.MemberChooser" timestamp="1595642768367">
       <screen x="0" y="0" width="1739" height="939" />
     </state>
-    <state x="664" y="185" key="#com.intellij.ide.util.MemberChooser/0.0.1739.939/1920.0.1522.912@0.0.1739.939" timestamp="1594577848716" />
+    <state x="664" y="185" key="#com.intellij.ide.util.MemberChooser/0.0.1739.939/1920.0.1522.912@0.0.1739.939" timestamp="1595642768367" />
     <state x="624" y="110" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1594516935784">
       <screen x="0" y="0" width="1739" height="939" />
     </state>
     <state x="624" y="110" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1739.939/1920.0.1522.912@0.0.1739.939" timestamp="1594516935784" />
-    <state x="492" y="64" key="CommitChangelistDialog2" timestamp="1594517329996">
+    <state x="492" y="64" key="CommitChangelistDialog2" timestamp="1595615106434">
       <screen x="0" y="0" width="1739" height="939" />
     </state>
-    <state x="492" y="64" key="CommitChangelistDialog2/0.0.1739.939/1920.0.1522.912@0.0.1739.939" timestamp="1594517329996" />
+    <state x="492" y="64" key="CommitChangelistDialog2/0.0.1739.939/1920.0.1522.912@0.0.1739.939" timestamp="1595615106434" />
     <state x="636" y="284" key="NewPhpClassDialog" timestamp="1594517569376">
       <screen x="0" y="0" width="1739" height="939" />
     </state>
     <state x="636" y="284" key="NewPhpClassDialog/0.0.1739.939/1920.0.1522.912@0.0.1739.939" timestamp="1594517569376" />
-    <state x="706" y="393" key="NewPhpFileDialog" timestamp="1594500851572">
+    <state x="706" y="393" key="NewPhpFileDialog" timestamp="1595643972939">
       <screen x="0" y="0" width="1739" height="939" />
     </state>
-    <state x="706" y="393" key="NewPhpFileDialog/0.0.1739.939/1920.0.1522.912@0.0.1739.939" timestamp="1594500851572" />
-    <state x="2415" y="285" key="com.intellij.ide.util.TipDialog" timestamp="1595328473384">
-      <screen x="1920" y="0" width="1522" height="912" />
+    <state x="706" y="393" key="NewPhpFileDialog/0.0.1739.939/1920.0.1522.912@0.0.1739.939" timestamp="1595643972939" />
+    <state x="379" y="112" key="SettingsEditor" timestamp="1595877376848">
+      <screen x="0" y="0" width="1739" height="939" />
     </state>
-    <state x="566" y="293" key="com.intellij.ide.util.TipDialog/0.0.1739.939/1920.0.1522.912@0.0.1739.939" timestamp="1594516654058" />
+    <state x="379" y="112" key="SettingsEditor/0.0.1739.939/1920.0.1522.912@0.0.1739.939" timestamp="1595877376848" />
+    <state x="566" y="293" key="com.intellij.ide.util.TipDialog" timestamp="1595614667992">
+      <screen x="0" y="0" width="1739" height="939" />
+    </state>
+    <state x="566" y="293" key="com.intellij.ide.util.TipDialog/0.0.1739.939/1920.0.1522.912@0.0.1739.939" timestamp="1595614667992" />
     <state x="2415" y="285" key="com.intellij.ide.util.TipDialog/0.0.1739.939/1920.0.1522.912@1920.0.1522.912" timestamp="1595328473384" />
     <state x="532" y="200" width="672" height="678" key="search.everywhere.popup" timestamp="1595330447243">
       <screen x="0" y="0" width="1739" height="939" />

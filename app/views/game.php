@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-    <link rel="stylesheet" href="<?=URL?>/css/style.css">
+    <link rel="stylesheet" href="<?=URL?>/css/style.css" type="text/css">
     <title>Rock-Paper-Scissors Game</title>
 </head>
 <body>
@@ -31,23 +31,18 @@
     <section>
         <div class="container">
             <h2 class="header">Pick your play</h2>
-            <div class="game">
-                <img src="<?=URL?>/img/rock.png" alt="rock">
-                <img src="<?=URL?>/img/paper.png" alt="paper">
-                <img src="<?=URL?>/img/scissors.png" alt="scissors">
-            </div>
             <div>
                 <form action="<?=URL?>/game/play" method="POST">
                     <div class="game">
-                        <button type="submit" class="btn btn-primary" name="submit" value="Rock">Rock</button>
-                        <button type="submit" class="btn btn-primary" name="submit" value="Paper">Paper</button>
-                        <button type="submit" class="btn btn-primary" name="submit" value="Scissors">Scissors</button>
+                        <button type="submit" name="submit" value="Rock" class="game_button"><img src="<?=URL?>/img/rock.png" alt="Rock"></button>
+                        <button type="submit" name="submit" value="Paper" class="game_button"><img src="<?=URL?>/img/paper.png" alt="Rock"></button>
+                        <button type="submit" name="submit" value="Rock" class="game_button"><img src="<?=URL?>/img/rock.png" alt="Rock"></button>
                     </div>
                 </form>
             </div>
             <div class="header">
-                <h5>Computer plays: <?php if (isset($data[0])) echo $data[0] ?></h5>
-                <h3>Result: <?php if (isset($data[0])) echo $data[1] ?></h3>
+                <?php if (isset($data[0])) echo '<h5>Computer plays: ' . $data[0] . '</h5>'?>
+                <?php if (isset($data[0])) echo '<h3>Result: ' . $data[1] . '</h3>'?>
             </div>
         </div>
     </section>

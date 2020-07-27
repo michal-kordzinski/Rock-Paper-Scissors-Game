@@ -8,7 +8,7 @@ class Game extends Controller
     /**
      * @var array
      */
-    private $game_result;
+
 
     /**
      * @param $number_of_game array number of game
@@ -20,18 +20,7 @@ class Game extends Controller
      *
      * @return mixed
      */
-    public function getGameResult($number_of_game, $key_of_value)
-    {
-        return $this->game_result[$number_of_game][$key_of_value];
-    }
 
-    /**
-     * @param mixed $game_result
-     */
-    public function setGameResult($game_result)
-    {
-        $this->game_result = $game_result;
-    }
     /**
      * Game constructor.
      */
@@ -50,26 +39,26 @@ class Game extends Controller
 
     /**
      * @param $model
+     *
      */
     public function play()
     {
         $this->model = $this->getModel('GameModel');
-        $computer_play = GameResults::ResultConversion(RandomizeNumber::randomize()); //string
-        $user_play = $_POST['submit']; //string
-        $this->model->saveResults($computer_play, $user_play, GameResults::whoWin($computer_play, $user_play));
-        $this->setGameResult($this->model->getResults()); //array
-        // TODO zdebbugowanie poniższej funckji
-        //print_r($this->game_result[array_key_last($this->game_result)]);
+        //$computer_play = GameResults::ResultConversion(RandomizeNumber::randomize()); //string
+        $this->model->setComputerPlay(GameResults::ResultConversion(RandomizeNumber::randomize()));
+        //$user_play = $_POST['submit']; //string
+        $this->model->setUserPlay();
+        $this->model->saveResults();
+//        echo '<pre>' . var_dump($this->model->getGameResults()) . '</pre>';
+//        echo '<pre>' . $_SESSION['game_results'][1]['User play'] . '</pre>';
         $this->getView('game', [
-            $this->getGameResult(
-                array_key_last($this->game_result), "Computer play"),
-            $this->getGameResult(
-                array_key_last($this->game_result), "Who wins")
+            $this->model->getGameResults(false, "Computer play", true),
+            $this->model->getGameResults(false, "Who wins", true)
         ]);
         /**
          * TODO stworzenie interfejsu przekierowującego
          * TODO przebudowa obiektów zgodnie z solid 5 - metody tego
-         *      wymagające przenieść do interfejsów
+         *      wymagające przenieść do trait`ów
          */
 
     }
